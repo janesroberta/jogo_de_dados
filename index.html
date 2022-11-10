@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Dados</title>
+
+    <style>
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+            width: 50%;
+        }
+
+        .title {
+            background-color: #3498db;
+            width: 100%;
+            color: #fff;
+            text-align: center;
+        }
+
+        .title__placar {
+            text-align: center;
+        }
+
+        .scores {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 1px solid #000;
+            height: 30vh;
+        }
+
+        .dices {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+        }
+
+        .players {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .turn.__active{
+            background-color: #2ecc71;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .turn {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #2ecc71;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .count {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="title">Jogo de Dados</h1>
+            <div class="results">
+                <h3 class="count">Jogadas: 10</h3>
+                <h2 class="title__placar">Placar</h2>
+                <div class="scores">
+                   <div class="score1">
+                    <span class="turn"></span>
+                        Jogador 1: <span class="pts1">0</span>
+                    </br>
+                    <ul class="scorePlayer1"></ul>
+                </div>
+                    <div class="score2">
+                        <span class="turn"></span>
+                        Jogador 2: <span class="pts2">0</span>
+                    </br>
+                    <ul class="scorePlayer2"></ul>
+                    </div>    
+                </div>
+            </div>
+            <div class="dices">
+                <div class="d dice1">-</div>
+                <div class="d dice2">-</div>
+            </div>
+            <div class="players">
+                <button class="btnPlayer player1" data-turn ="" data-player = 1 data-name = "">Identificar Jogador 1</button>
+                <button class="btnPlayer player2" data-turn ="" data-player = 2 data-name = "">Identificar Jogador 2</button>
+            </div>
+            <div class="controls">
+                <button class="btnRestart">Restart Game</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
